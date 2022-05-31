@@ -20,7 +20,7 @@ def predict():
     prediction=model.predict_proba(final_features)
     output='{0:.{1}f}'.format(prediction[0][1], 2)
    
-    return render_template('index.html', pred='Student passing probability is :  {}'.format(output))
+    return render_template('index.html', pred='Student passing probability is :  {}'.format(int_features ))
 
 if __name__ == '__main__':
     app.run(debug=False)
