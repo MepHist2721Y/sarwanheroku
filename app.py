@@ -15,10 +15,10 @@ def predict():
     # receive the values send by user in three text boxes thru request object -> requesst.form.values()
     
     int_features = [int(x) for x in request.form.values()]
-    final_features = [np.array(int_features)]
+#     final_features = [np.array(int_features)]
        
-    prediction=model.predict_proba(final_features)
-    output='{0:.{1}f}'.format(prediction[0][1], 2)
+#     prediction=model.predict_proba(final_features)
+#     output='{0:.{1}f}'.format(prediction[0][1], 2)
    
     return render_template('index.html', pred='Student passing probability is :  {}'.format(int_features ))
 
